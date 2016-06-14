@@ -1,0 +1,57 @@
+<h3>服務端</h3><p><span class="key">mopo.exe</span>, 各參數用 <span class="key">,</span> 隔開</p>
+<dl>
+	<dt>/BACKUP</dt>
+		<dd>執行壓縮備份, 執行時不能有寫入動作, 不建議使用, 如有需要請透過 WEB_API</dd>
+	<dt>/CONFIG_SERVER</dt>
+		<dd>請參考 &lt;<a href="document.php?section=server&amp;document=server_config">網路設定</a>&gt;<br /><img src="img/sdk_command_line_0001.png" /></dd>
+	<dt>/CONV_TO_WEB_ALBUM</dt>
+		<dd>轉出相簿, 請參考 &lt;<a href="document.php?section=web_order&amp;document=web_order_conv">從服務端轉出資料</a>&gt;</dd>
+	<dt>/CONV_TO_WEB_ALL</dt>
+		<dd>轉出全部, 請參考 &lt;<a href="document.php?section=web_order&amp;document=web_order_conv">從服務端轉出資料</a>&gt;</dd>
+	<dt>/CONV_TO_WEB_DB</dt>
+		<dd>轉出資料庫, 請參考 &lt;<a href="document.php?section=web_order&amp;document=web_order_conv">從服務端轉出資料</a>&gt;</dd>
+	<dt>/CONV_TO_WEB_ETC</dt>
+		<dd>轉出其他, 請參考 &lt;<a href="document.php?section=web_order&amp;document=web_order_conv">從服務端轉出資料</a>&gt;</dd>
+	<dt>/CONV_TO_WEB_PHOTO</dt>
+		<dd>轉出照片, 請參考 &lt;<a href="document.php?section=web_order&amp;document=web_order_conv">從服務端轉出資料</a>&gt;</dd>
+	<dt>/CREATE_UPGRADE</dt>
+		<dd>打包資料夾成一個檔案<br /><a href="img/sdk_command_line_0002_source.png" target="_blank"><img src="img/sdk_command_line_0002.png" /></a></dd>
+	<dt>/DUPLICATE</dt>
+		<dd>執行比對備份, 執行時不能有寫入動作, 不建議使用, 如有需要請透過 WEB_API</dd>
+	<dt>/EXPORT_SAMPLE</dt>
+		<dd>將一些設定打包成一個檔案, 供分享使用<br /><a href="img/sdk_command_line_0003_source.png" target="_blank"><img src="img/sdk_command_line_0003.png" /></a></dd>
+	<dt>/FTP_REPORT</dt>
+		<dd>交班報表FTP回傳, WEB_API 有支援, 參數如下<ol>
+			<li>交班報表完整路徑, 例: D:\mopo_server\db\class\2011\0406\184702</li>
+		</ol></dd>
+	<dt>/REG_CODE</dt>
+		<dd>查看本機註冊碼<br /><img src="img/sdk_command_line_0004.png" /></dd>
+	<dt>/SERVER</dt>
+		<dd>啟動服務端, 需等待一些時間</dd>
+	<dt>/SERVER_STARTUP_NO_WAIT</dt>
+		<dd>啟動服務端, 馬上</dd>
+</dl>
+
+<h3>客端程式</h3><p><span class="key">mopo.exe</span>, 各參數用 <span class="key">,</span> 隔開</p>
+<dl>
+	<dt>/CONFIG_CLIENT</dt>
+		<dd>請參考 &lt;<a href="document.php?section=client&amp;document=client_config">網路設定</a>&gt;</dd>
+</dl>
+
+<h3>前台收銀</h3><p><span class="key">mopo_client.exe</span>, 各參數用 <span class="key">,</span> 隔開</p>
+<dl>
+	<dt>/CASH_CALCULATOR</dt>
+		<dd>快速算錢 (工具 --&gt; 金額計算機)<br /><a href="img/sdk_command_line_0005_source.png" target="_blank"><img src="img/sdk_command_line_0005.png" /></a></dd>
+	<dt>/CREATE_UPGRADE</dt>
+		<dd>打包資料夾成一個檔案<br /><a href="img/sdk_command_line_0002_source.png" target="_blank"><img src="img/sdk_command_line_0002.png" /></a></dd>
+	<dt>/PRINT_BARCODE</dt>
+		<dd>無條碼之貨品可自印 (工具 --&gt; 列印條碼)<br /><a href="img/sdk_command_line_0007_source.png" target="_blank"><img src="img/sdk_command_line_0007.png" /></a></dd>
+	<dt>/PRINT_BARCODE_MENU</dt>
+		<dd>可訂成一本書 (工具 --&gt; 列印條碼型錄)<br /><a href="img/sdk_command_line_0008_source.png" target="_blank"><img src="img/sdk_command_line_0008.png" /></a></dd>
+	<dt>/SUPPLIER</dt>
+		<dd>廠商相關資料 (資料 --&gt; 廠商)<br /><a href="img/sdk_command_line_0010_source.png" target="_blank"><img src="img/sdk_command_line_0010.png" /></a></dd>
+	<dt>/STORES</dt>
+		<dd>店家相關資料 (資料 --&gt; 店家)<br /><a href="img/sdk_command_line_0009_source.png" target="_blank"><img src="img/sdk_command_line_0009.png" /></a></dd>
+	<dt>/TEST_PRINT</dt>
+		<dd>測試印表機用 (工具 --&gt; 列印測試)<br /><a href="img/sdk_command_line_0006_source.png" target="_blank"><img src="img/sdk_command_line_0006.png" /></a></dd>
+</dl>

@@ -1,0 +1,405 @@
+<h3>ad</h3><p>存放廣告輪播的照片或影片 (後台管理可以上傳)</p>
+
+<h3>album</h3><p>相簿 (後台管理可以上傳)</p>
+<dl>
+	<dt>goods</dt>
+		<dd>商品</dd>
+</dl>
+
+<h3>db</h3><p>資料庫</p>
+<dl>
+	<dt>age</dt>
+		<dd>報表查詢中<span class="key">來客數</span>的匯出TSV檔</dd>
+	<dt>apply</dt>
+		<dd>報表查詢中<span class="key">原物料使用</span>的匯出TSV檔</dd>
+	<dt>booking</dt>
+		<dd>報表查詢中<span class="key">訂位簿</span>的匯出TSV檔</dd>
+	<dt>class</dt>
+		<dd>各班資料庫與交班報表<table class="code">
+			<tr><th>檔名</th><th>說明</th></tr>
+			<tr><td>age.db</td><td>來客數</td></tr>
+			<tr><td>billing.db</td><td>訂單</td></tr>
+			<tr><td>cash.db</td><td>金流</td></tr>
+			<tr><td>checkout.db</td><td>買單</td></tr>
+			<tr><td>customer.db</td><td>來客數</td></tr>
+			<tr><td>delivery.db</td><td>外送</td></tr>
+			<tr><td>expenditure.db</td><td>支出</td></tr>
+			<tr><td>income.db</td><td>收入</td></tr>
+			<tr><td>meal.db</td><td>出餐</td></tr>
+			<tr><td>meal.xxxx.db</td><td>餐桌結帳出餐留底</td></tr>
+			<tr><td>ordering.db</td><td>自助</td></tr>
+			<tr><td>revenue.db.db</td><td>營業額</td></tr>
+			<tr><td>revenue.money.db</td><td>營業額統計</td></tr>
+			<tr><td>sale_additional.db</td><td>售出加料</td></tr>
+			<tr><td>sale_additional.inventory.xx.db</td><td>售出加料統計</td></tr>
+			<tr><td>sale_consume.db</td><td>售出原物料</td></tr>
+			<tr><td>sale_consume.inventory.xx.db</td><td>售出原物料統計</td></tr>
+			<tr><td>sale_flavor.db</td><td>售出口味</td></tr>
+			<tr><td>sale_flavor.inventory.xx.db</td><td>售出口味統計</td></tr>
+			<tr><td>sale_goods.db</td><td>售出商品</td></tr>
+			<tr><td>sale_goods.inventory.xx.db</td><td>售出商品統計</td></tr>
+			<tr><td>table_ordering.db</td><td>餐桌費用</td></tr>
+			<tr><td>table_ordering.xxxx.db</td><td>餐桌結帳費用留底</td></tr>
+			<tr><td>timer.db</td><td>餐桌使用</td></tr>
+			<tr><td>uncollected.db</td><td>延收</td></tr>
+			<tr><td>yourself.db</td><td>自取</td></tr>
+			<tr><td>*.ini</td><td>列印用</td></tr>
+			<tr><td>*.tsv</td><td>TSV報表</td></tr>
+		</table></dd>
+	<dt>guestbook</dt>
+		<dd>報表查詢中<span class="key">意見留言</span>的匯出TSV檔</dd>
+	<dt>kitchen</dt>
+		<dd>廚房顯示的出餐資料庫</dd>
+	<dt>meal</dt>
+		<dd>報表查詢中<span class="key">餐飲費</span>的匯出TSV檔</dd>
+	<dt>revenue</dt>
+		<dd>報表查詢中<span class="key">盈收</span>的匯出TSV檔</dd>
+	<dt>ring</dt>
+		<dd>網頁報表登入後的權限表</dd>
+	<dt>sales</dt>
+		<dd>報表查詢中<span class="key">銷售</span>的匯出TSV檔</dd>
+	<dt>staff</dt>
+		<dd>報表查詢中<span class="key">員工出勤</span>的匯出TSV檔</dd>
+	<dt>statistics</dt>
+		<dd>報表查詢中<span class="key">進出貨</span>的匯出TSV檔</dd>
+	<dt>supplier</dt>
+		<dd>報表查詢中<span class="key">廠商物流</span>的匯出TSV檔</dd>
+	<dt>system</dt>
+		<dd>系統資料表<table class="code">
+			<tr><th>檔名</th><th>說明</th></tr>
+			<tr><td>additional.db</td><td>加料</td></tr>
+			<tr><td>age.db</td><td>來客統計</td></tr>
+			<tr><td>age_group.db</td><td>來客統計分組</td></tr>
+			<tr><td>allow_ip.db</td><td>允許連線IP</td></tr>
+			<tr><td>booking.db</td><td>訂位簿</td></tr>
+			<tr><td>booking_clock.db</td><td>訂位時間表</td></tr>
+			<tr><td>cash_register.db</td><td>收銀機</td></tr>
+			<tr><td>cash_register.money.db</td><td>收銀機的錢</td></tr>
+			<tr><td>class.db</td><td>班別</td></tr>
+			<tr><td>class_log.db</td><td>交班記錄</td></tr>
+			<tr><td>class_memo.db</td><td>交班備忘</td></tr>
+			<tr><td>contact.db</td><td>聯絡人</td></tr>
+			<tr><td>customer.db</td><td>顧客層</td></tr>
+			<tr><td>delivery.db</td><td>連絡簿(外送)</td></tr>
+			<tr><td>department.db</td><td>部門</td></tr>
+			<tr><td>flavor.db</td><td>口味</td></tr>
+			<tr><td>flavor_group.db</td><td>口味分類</td></tr>
+			<tr><td>goods.db</td><td>商品</td></tr>
+			<tr><td>goods.inventory.xx.db</td><td>商品庫存</td></tr>
+			<tr><td>goods_category.db</td><td>商品分類</td></tr>
+			<tr><td>holiday.db</td><td>假日表</td></tr>
+			<tr><td>ingredient.db</td><td>原物料</td></tr>
+			<tr><td>ingredient.inventory.xx.db</td><td>原物料庫存</td></tr>
+			<tr><td>ingredient_type.db</td><td>原物料種類</td></tr>
+			<tr><td>jobrole.db</td><td>職稱</td></tr>
+			<tr><td>kitchen.db</td><td>廚房</td></tr>
+			<tr><td>kitchen.display.xx.db</td><td>廚房顯示</td></tr>
+			<tr><td>mark.db</td><td>標記</td></tr>
+			<tr><td>menu.db</td><td>菜單</td></tr>
+			<tr><td>once.db</td><td>一次性收費</td></tr>
+			<tr><td>order_notice.db</td><td>點餐公告</td></tr>
+			<tr><td>place.db</td><td>區域</td></tr>
+			<tr><td>purchase.db</td><td>加購商品</td></tr>
+			<tr><td>remittannce.db</td><td>匯款</td></tr>
+			<tr><td>report_ip.db</td><td>IP回報</td></tr>
+			<tr><td>server.db</td><td>系統參數</td></tr>
+			<tr><td>sold_out.db</td><td>暫時停售</td></tr>
+			<tr><td>staff.db</td><td>員工</td></tr>
+			<tr><td>staff.attendance.db</td><td>員工出勤</td></tr>
+			<tr><td>staff.password.db</td><td>密碼</td></tr>
+			<tr><td>staff_group.db</td><td>族群</td></tr>
+			<tr><td>stores.db</td><td>店家資料</td></tr>
+			<tr><td>supplier.db</td><td>廠商</td></tr>
+			<tr><td>table.db</td><td>餐桌</td></tr>
+			<tr><td>table.timing.db</td><td>餐桌桌況</td></tr>
+			<tr><td>table_type.db</td><td>餐桌種類</td></tr>
+			<tr><td>tag.db</td><td>標籤</td></tr>
+			<tr><td>unit.db</td><td>計數單位</td></tr>
+			<tr><td>vice.db</td><td>副餐</td></tr>
+			<tr><td>vice_group.db</td><td>副餐組別</td></tr>
+			<tr><td>waiting.db</td><td>候位表</td></tr>
+			<tr><td>warehouse.db</td><td>倉庫</td></tr>
+			<tr><td>web_key.db</td><td>網頁金鑰</td></tr>
+		</table></dd>
+	<dt>table</dt>
+		<dd>餐桌點餐的資料庫</dd>
+	<dt>timer</dt>
+		<dd>報表查詢中<span class="key">餐桌統計</span>的匯出TSV檔</dd>
+	<dt>tsv</dt>
+		<dd>基本資料與本班現況的匯出TSV檔</dd>
+</dl>
+
+<h3>icon</h3><p>操作介面圖示與設定</p>
+<dl>
+	<dt>admin</dt>
+		<dd>後台管理與前台收銀用的小圖示, 24x24 32bit ico格式, 可自由替換</dd>
+	<dt>cash</dt>
+		<dd>貨幣圖示, 可自由替換<ul class="code">
+			<li>由 <span class="key">currency.ini</span> 指定資料夾</li>
+			<li>指定資料夾\<span class="key">cash.ini</span> 設定圖示與幣值</li>
+		</ul></dd>
+	<dt>front</dt>
+		<dd><span class="key">前台收銀</span>用到的圖示, 由 <span class="key">iconset.ini</span> 指定資料夾, 可自由替換</dd>
+	<dt>kitchen</dt>
+		<dd><span class="key">廚房顯示</span>用到的圖示, 由 <span class="key">iconset.ini</span> 指定資料夾, 可自由替換</dd>
+	<dt>order</dt>
+		<dd><span class="key">自助點餐</span>用到的圖示, 由 <span class="key">iconset.ini</span> 指定資料夾, 可自由替換</dd>
+	<dt>table</dt>
+		<dd><span class="key">區域</span>裡排列座標時, 餐桌的平面圖示, 可自由替換</dd>
+	<dt>ui</dt>
+		<dd>操作介面的設定檔, 由 <span class="key">iconset.ini</span> 指定資料夾, 可自由修改</dd>
+	<dt>uncollected</dt>
+		<dd>延收帳款的圖示, 可自由替換<ul>
+			<li>由 <span class="key">uncollected.ini</span> 指定資料夾</li>
+			<li>指定資料夾\<span class="key">color.ini</span> 設定圖示與經過時間</li>
+		</ul></dd>
+</dl>
+
+
+<h3>log</h3><p>日誌檔, 其中 index_*.tsv 為欄位名稱對應表</p>
+<dl>
+	<dt>account</dt>
+		<dd>登入</dd>
+	<dt>additional</dt>
+		<dd>加料</dd>
+	<dt>age</dt>
+		<dd>來客數</dd>
+	<dt>attendance</dt>
+		<dd>出勤</dd>
+	<dt>backup</dt>
+		<dd>備份</dd>
+	<dt>billing</dt>
+		<dd>訂單</dd>
+	<dt>booking</dt>
+		<dd>訂位簿</dd>
+	<dt>call</dt>
+		<dd>櫃臺呼叫</dd>
+	<dt>cash</dt>
+		<dd>現金流動</dd>
+	<dt>cash_register</dt>
+		<dd>收銀機</dd>
+	<dt>checkout</dt>
+		<dd>買單</dd>
+	<dt>class</dt>
+		<dd>交班</dd>
+	<dt>connect</dt>
+		<dd>連線</dd>
+	<dt>cooking</dt>
+		<dd>出菜時間</dd>
+	<dt>customer</dt>
+		<dd>顧客層</dd>
+	<dt>db</dt>
+		<dd>載入</dd>
+	<dt>delivery</dt>
+		<dd>外送</dd>
+	<dt>expenditure</dt>
+		<dd>各班支出</dd>
+	<dt>flavor</dt>
+		<dd>口味</dd>
+	<dt>ftp_report</dt>
+		<dd>交班報表FTP回傳</dd>
+	<dt>goods</dt>
+		<dd>商品</dd>
+	<dt>headquarters</dt>
+		<dd>總部</dd>
+	<dt>income</dt>
+		<dd>其他收入</dd>
+	<dt>ingredient</dt>
+		<dd>原物料</dd>
+	<dt>meal</dt>
+		<dd>出餐</dd>
+	<dt>ordering</dt>
+		<dd>自助點餐</dd>
+	<dt>password</dt>
+		<dd>密碼</dd>
+	<dt>purchase</dt>
+		<dd>加購</dd>
+	<dt>revenue</dt>
+		<dd>營業額</dd>
+	<dt>storage</dt>
+		<dd>倉儲(總量)</dd>
+	<dt>storage2</dt>
+		<dd>倉儲(個別)</dd>
+	<dt>supplier</dt>
+		<dd>廠商物流</dd>
+	<dt>table</dt>
+		<dd>餐桌</dd>
+	<dt>table_ordering</dt>
+		<dd>點餐</dd>
+	<dt>timer</dt>
+		<dd>用餐</dd>
+	<dt>uncollected</dt>
+		<dd>延收帳款</dd>
+	<dt>vice</dt>
+		<dd>副餐</dd>
+	<dt>waiting</dt>
+		<dd>候位表</dd>
+	<dt>yourself</dt>
+		<dd>自取</dd>
+</dl>
+
+<h3>logo</h3><p>商標圖案 (後台管理可以上傳)</p>
+<dl>
+	<dt>front.photo</dt>
+		<dd>前台收銀<br /><img src="img/sdk_server_folder_0005.png" /></dd>
+	<dt>order.photo</dt>
+		<dd>自助點餐<br /><img src="img/sdk_server_folder_0005.png" /></dd>
+</dl>
+
+<h3>photo</h3><p>照片 (後台管理可以上傳)</p>
+<dl>
+	<dt>age</dt>
+		<dd>來客統計</dd>
+	<dt>contact</dt>
+		<dd>連絡人</dd>
+	<dt>customer</dt>
+		<dd>顧客層</dd>
+	<dt>flavor</dt>
+		<dd>口味</dd>
+	<dt>goods</dt>
+		<dd>商品</dd>
+	<dt>goods_Category</dt>
+		<dd>商品分類</dd>
+	<dt>ingredient</dt>
+		<dd>原物料</dd>
+	<dt>mark</dt>
+		<dd>標記</dd>
+	<dt>menu</dt>
+		<dd>菜單</dd>
+	<dt>place</dt>
+		<dd>區域</dd>
+	<dt>staff</dt>
+		<dd>員工</dd>
+	<dt>supplier</dt>
+		<dd>廠商</dd>
+	<dt>table_type</dt>
+		<dd>餐桌種類</dd>
+	<dt>tag</dt>
+		<dd>標籤</dd>
+</dl>
+
+<h3>php</h3><p>網頁用的常數</p>
+<dl>
+	<dt>order</dt>
+		<dd>網頁點餐</dd>
+	<dt>report</dt>
+		<dd>網頁報表</dd>
+</dl>
+
+<h3>sound</h3><p>操作音效 (後台管理可以上傳)</p>
+<dl>
+	<dt>01.wav</dt>
+		<dd>完成</dd>
+	<dt>02.wav</dt>
+		<dd>提示</dd>
+	<dt>03.wav</dt>
+		<dd>詢問</dd>
+	<dt>04.wav</dt>
+		<dd>翻頁</dd>
+	<dt>05.wav</dt>
+		<dd>刷條碼</dd>
+	<dt>06.wav</dt>
+		<dd>加數量</dd>
+	<dt>07.wav</dt>
+		<dd>扣數量</dd>
+	<dt>08.wav</dt>
+		<dd>選取</dd>
+	<dt>09.wav</dt>
+		<dd>自助點餐提示</dd>
+	<dt>10.wav</dt>
+		<dd>廚房出餐提示</dd>
+	<dt>11.wav</dt>
+		<dd>顧客呼叫</dd>
+</dl>
+
+<h3>splash</h3><p>啟動畫面 (720x480) (後台管理可以上傳)</p>
+<dl>
+	<dt>front.photo</dt>
+		<dd>前台收銀<br /><a href="img/sdk_server_folder_0001_source.png" target="_blank"><img src="img/sdk_server_folder_0001.png" /></a></dd>
+	<dt>order.photo</dt>
+		<dd>自助點餐<br /><a href="img/sdk_server_folder_0002_source.png" target="_blank"><img src="img/sdk_server_folder_0002.png" /></a></dd>
+	<dt>printing.photo</dt>
+		<dd>列印中<br /><a href="img/sdk_server_folder_0003_source.png" target="_blank"><img src="img/sdk_server_folder_0003.png" /></a></dd>
+	<dt>update.photo</dt>
+		<dd>同步中<br /><a href="img/sdk_server_folder_0004_source.png" target="_blank"><img src="img/sdk_server_folder_0004.png" /></a></dd>
+</dl>
+
+<h3>template</h3><p>列印樣板檔</p>
+<dl>
+	<dt>barcode</dt>
+		<dd>條碼<table class="code">
+			<tr><th>資料夾</th><th>內容</th></tr>
+			<tr><td>menu</td><td>條碼型錄</td></tr>
+			<tr><td>single</td><td>貨品條碼</td></tr>
+		</table></dd>
+	<dt>cargo</dt>
+		<dd>叫貨單</dd>
+	<dt>cash_calculation</dt>
+		<dd>現金清單</dd>
+	<dt>customer</dt>
+		<dd>顧客收據</dd>
+	<dt>delivery</dt>
+		<dd>外送簽收單</dd>
+	<dt>inventory</dt>
+		<dd>盤點單</dd>
+	<dt>invoice</dt>
+		<dd>發票</dd>
+	<dt>kitchen</dt>
+		<dd>出餐單</dd>
+	<dt>meal</dt>
+		<dd>送餐單</dd>
+	<dt>ordering</dt>
+		<dd>自助點餐確認單</dd>
+	<dt>shift_change</dt>
+		<dd>交班報表<table class="code">
+			<tr><th>資料夾</th><th>內容</th></tr>
+			<tr><td colspan="2">&lt;單張&gt;</td></tr>
+			<tr><td>additional</td><td>加料收入統計</td></tr>
+			<tr><td>billing</td><td>訂單收入統計</td></tr>
+			<tr><td>cash</td><td>收銀機現金</td></tr>
+			<tr><td>checkout</td><td>餐桌收入統計</td></tr>
+			<tr><td>expenditure</td><td>本班支出明細</td></tr>
+			<tr><td>goods</td><td>商品收入統計</td></tr>
+			<tr><td>income</td><td>其他收入明細</td></tr>
+			<tr><td>loss_additional</td><td>加料損失統計</td></tr>
+			<tr><td>loss_goods</td><td>商品損失統計</td></tr>
+			<tr><td>meal</td><td>出餐明細</td></tr>
+			<tr><td>revenue</td><td>營業額統計</td></tr>
+			<tr><td>sold_out</td><td>停售明細</td></tr>
+			<tr><td>timer</td><td>餐桌使用明細</td></tr>
+			<tr><td>uncollected</td><td>餐桌未結統計</td></tr>
+			<tr><td colspan="2">&lt;多張&gt;</td></tr>
+			<tr><td>list_additional</td><td>加料統計</td></tr>
+			<tr><td>list_age</td><td>來客數統計</td></tr>
+			<tr><td>list_billing</td><td>訂單明細</td></tr>
+			<tr><td>list_cash</td><td>收銀明細</td></tr>
+			<tr><td>list_checkout</td><td>餐桌收入明細</td></tr>
+			<tr><td>list_delivery</td><td>外送明細</td></tr>
+			<tr><td>list_flavor</td><td>口味統計</td></tr>
+			<tr><td>list_goods</td><td>售出統計</td></tr>
+			<tr><td>list_ingredient</td><td>原物料統計</td></tr>
+			<tr><td>list_loss_additional</td><td>加料損失</td></tr>
+			<tr><td>list_loss_flavor</td><td>口味損失</td></tr>
+			<tr><td>list_loss_goods</td><td>商品損失</td></tr>
+			<tr><td>list_loss_ingredient</td><td>原物料損失</td></tr>
+			<tr><td>list_ordering</td><td>自助點餐明細</td></tr>
+			<tr><td>list_storage</td><td>庫存結算</td></tr>
+			<tr><td>list_table_ordering</td><td>餐桌點餐明細</td></tr>
+			<tr><td>list_timer</td><td>餐桌使用明細</td></tr>
+			<tr><td>list_uncollected</td><td>延收帳款明細</td></tr>
+			<tr><td>list_yourself</td><td>自取明細</td></tr>
+		</table></dd>
+	<dt>sticker</dt>
+		<dd>貼紙</dd>
+	<dt>stores</dt>
+		<dd>店家資料</dd>
+	<dt>table</dt>
+		<dd>餐桌<table code="code">
+			<tr><th>資料夾</th><th>內容</th></tr>
+			<tr><td>customer</td><td>買單收據</td></tr>
+			<tr><td>meal</td><td>餐點明細</td></tr>
+			<tr><td>number</td><td>桌號單</td></tr>
+		</table></dd>
+	<dt>yourself</dt>
+		<dd>自取簽收單</dd>
+</dl>

@@ -1,0 +1,44 @@
+<h3>中刮號</h3>
+<p><span class="key">關鍵字</span>與<span class="key">四組號碼</span>組成, 所以同一關鍵字可以有多組不同輸出</p>
+<dl>
+	<dt>LOGO_</dt>
+		<dd>商標圖示</dd>
+	<dt>CURRENCY_</dt>
+		<dd>貨幣圖示</dd>
+	<dt>PHOTO_GOODS_</dt>
+		<dd>商品照片</dd>
+	<dt>PHOTO_GOODS_CATEGORY_</dt>
+		<dd>分類照片</dd>
+	<dt>PHOTO_TAG_</dt>
+		<dd>標籤照片</dd>
+	<dt>PHOTO_FLAVOR_</dt>
+		<dd>口味照片</dd>
+	<dt>PHOTO_INGREDIENT_</dt>
+		<dd>加料照片</dd>
+	<dt>PHOTO_MENU_</dt>
+		<dd>菜單照片</dd>
+	<dt>ALBUM_GOODS_</dt>
+		<dd>商品相簿</dd>
+</dl>
+
+<h3>項目</h3>
+<dl>
+	<dt>PHOTO_WIDTH</dt>
+		<dd>寬度</dd>
+	<dt>PHOTO_HEIGHT</dt>
+		<dd>高度 (當值為 <span class="key">-1</span> 時, 高度隨寬度值等比率縮放)</dd>
+	<dt>OUTPUT_FORMAT</dt>
+		<dd><ul>
+			<li><span class="key">png</span></li>
+			<li><span class="key">jpg</span></li>
+		</ul></dd>
+	<dt>OUTPUT_FILE</dt>
+		<dd>附檔名自動套用 OUTPUT_FORMAT 設定值<ul>
+			<li><span class="key">%ID%</span> (= 該物件唯一序號四碼字串)</li>
+			<li><span class="key">%WIDTH%</span> (= PHOTO_WIDTH 設定值)</li>
+			<li><span class="key">%HEIGHT%</span> (= PHOTO_HEIGHT 設定值)</li>
+		</ul></dd>
+</dl>
+
+<p>ini檔結構<br /><img src="img/web_order_conv_settings_0001.png" /></p>
+<p>轉檔後<br /><img src="img/web_order_conv_settings_0002.png" /></p>

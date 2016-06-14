@@ -1,0 +1,37 @@
+<h3>允許連線IP</h3><p>與設定可以與服務端進行連線的IP範圍<br /><img src="img/back_admin_system_0001.png" /></p>
+<dl>
+	<dt>只有一組IP</dt>
+		<dd class="code">123.123.123.123 / 0.0.0.0</dd>
+	<dt>某IP網段</dt>
+		<dd>遠端IP請輸入該網段任一IP, 遠端IP遮罩請輸入該網段的遮罩<br /><span class="code">123.123.123.123 / 255.255.255.240</span><br />常用遮罩值<table class="code">
+			<tr><th>遮罩</th><th>IP數量</th></tr>
+			<tr><td>255.255.255.0</td><td>254</td></tr>
+			<tr><td>255.255.255.128</td><td>126</td></tr>
+			<tr><td>255.255.255.192</td><td>62</td></tr>
+			<tr><td>255.255.255.224</td><td>30</td></tr>
+			<tr><td>255.255.255.240</td><td>14</td></tr>
+			<tr><td>255.255.255.248</td><td>6</td></tr>
+		</table></dd>
+	<dt>沒有限制</dt>
+		<dd class="code">0.0.0.0 / 0.0.0.0</dd>
+</dl>
+
+<h3>網頁金鑰</h3><p>給網頁報表用的, 可直接開報表, 不需進行登入來取得連線金鑰<br /><img src="img/back_admin_system_0002.png" /></p>
+<dl>
+	<dt>族群</dt>
+		<dd>與員工的族群一樣, 控制權限用的</dd>
+	<dt>金鑰</dt>
+		<dd>http://.../mpos/report/report.php?ak=<span class="key">金鑰</span>&amp;si=staff...<br />這樣網頁報表就可以直接供其他軟體讀取資料</dd>
+</dl>
+
+<h3>IP回報</h3><p>丟封包給遠端的主機, 這樣它便可蒐集到本服務端的外網IP, 請參考 &lt;...&gt;<br /><img src="img/back_admin_system_0003.png" /></p>
+
+<h3>交班記錄</h3><p><a href="img/back_admin_system_0004_source.png" target="_blank"><img src="img/back_admin_system_0004.png" /></a></p>
+
+<h3>收銀機</h3><p><span class="key">前台收銀</span>的資料, 這樣才可以登入使用<br /><img src="img/back_admin_system_0005.png" /></p>
+<dl>
+	<dt>收銀代號</dt>
+		<dd>該台電腦的名稱</dd>
+	<dt>區網位址</dt>
+		<dd>該台電腦連過來的位址</dd>
+</dl>

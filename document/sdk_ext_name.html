@@ -1,0 +1,20 @@
+<h3>.db</h3>
+<p>服務端使用的資料表檔, 檔頭佔 512 位元組</p>
+<ul class="code">
+	<li>0x00000000 int 版本</li>
+	<li>0x00000004 int 筆數</li>
+	<li>0x00000008 int 下一個唯一編號</li>
+	<li>0x0000000C byte 以下保留</li>
+</ul><p><img src="img/sdk_ext_name_0001.png" /></p>
+
+<h3>.ini</h3>
+<p>設定檔<br /><img src="img/sdk_ext_name_0002.png" /></p>
+
+<h3>.photo</h3>
+<p>照片, 有兩種格式, <span class="key">png</span> 與 <span class="key">jpg</span>, 因為要統一檔名, 所以副檔名直接改為 photo, 裡面的檔案結構沒有變動</p>
+
+<h3>.tsv</h3>
+<p>一種文字資料庫, 以<span class="key">斷行符號 (0x0D, 0x0A)</span>分列, <span class="key">定位符號 (0x09)</span>分欄<br /><img src="img/sdk_ext_name_0003.png" /></p>
+
+<h3>.txt</h3>
+<p>在 template 裡, 列印樣板檔<br /><img src="img/sdk_ext_name_0004.png" /></p>

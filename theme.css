@@ -1,0 +1,424 @@
+body {
+	margin : 0;
+	padding : 0;
+	color : #000000;
+	background-color : #E0E0E0;
+	font-family : 微軟正黑體, Verdana;
+	font-size : 14pt;
+	border-style : solid;
+	border-width : 4px 0 0 0;
+	border-color : #3377CC;
+}
+
+h1 {
+	margin : 0;
+	padding : 16px;
+	font-size : 20pt;
+	color : #A80000;
+}
+
+h2 {
+	margin : 0 8px;
+	padding : 8px;
+	font-size : 16pt;
+	color : #FFFFFF;
+	background-color : #AAAAAA;
+	border-radius : 5px;
+}
+
+h3 {
+	margin : 8px 0 0 0;
+	padding : 8px 16px;
+	font-size : 16pt;
+	color : #007700;
+}
+
+a {
+	text-decoration : none;
+}
+
+ul li {
+	line-height : 140%;
+}
+
+ol li {
+	padding : 0 0 16px 0;
+	line-height : 140%;
+}
+
+table th,td {
+	padding : 0;
+}
+
+button {
+	font-family : 微軟正黑體, Verdana;
+	font-size : 14pt;
+}
+
+div.error {
+	margin :64px auto 0 auto;
+	padding : 32px;
+	width : 640px;
+	color : #CC0000;
+	background-color : #FFD8D8;
+	text-align : center;
+	font-size : 24pt;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #AA0000;
+	border-radius : 5px;
+}
+
+div.header {
+	padding : 0 0 16px 0;
+}
+
+div.tab {
+	margin : 0 auto;
+	width : 996px;
+	background-image : url(logo/logo_64.png);
+	background-repeat : no-repeat;
+	background-position : right 8px;
+}
+
+div.tab a {
+	display : inline-block;
+	width : 100px;
+	height : 40px;
+	padding : 32px 0 0 0;
+	font-size : 16pt;
+	font-weight : bold;
+	text-align : center;
+	color : #333333;
+	border-radius : 0 0 8px 8px;
+}
+
+div.tab a.current {
+	color : #FFFFFF;
+	background-color : #3377CC;
+}
+
+div.tab a.page:hover {
+	margin : 2px 2px 0 2px;
+	width : 96px;
+	height : 36px;
+	padding : 30px 0 0 0;
+	color : #FFFFFF;
+	background-color : #C80000;
+}
+
+div.footer {
+	margin : 16px auto 0 auto;
+	padding : 16px 0;
+	width : 996px;
+}
+
+div.footer div.pages {
+	text-align : right;
+}
+
+div.footer a.page {
+	color : #3366CC;
+}
+
+div.footer a.page:hover {
+	color : #CC0000;
+}
+
+div.footerp {
+	margin : 16px 0 0 0;
+	padding : 8px 16px;
+	text-align : right;
+	border-style : solid;
+	border-width : 2px 0 0 0;
+	border-color : #888888;
+}
+
+span.key {
+	font-weight : bold;
+	color : #CC0000;
+}
+
+table.page {
+	margin : 8px auto 0 auto;
+	width : 998px;
+	background-color : #FFFFFF;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #888888;
+	border-radius : 5px;
+}
+
+table.page td.content {
+	width : 800px;
+}
+
+table.page td.nav {
+	border-style : solid;
+	border-width : 0 0 0 1px;
+	border-color : #888888;
+}
+
+div.content {
+	width : 800px;
+	padding : 0 0 16px 0;
+}
+
+div.content ul,ol {
+	margin : 8px 0 0 8px;
+}
+
+div.content *.code {
+	font-family : Consolas, "Courier New", "Lucida Console";
+}
+
+div.content dl {
+	margin : 8px 0 0 60px;
+	padding : 0;
+}
+
+div.content dt {
+	font-weight : bold;
+	color : #3377CC;
+	line-height : 140%;
+}
+
+div.content dd {
+	padding : 0 0 16px 0;
+	line-height : 140%;
+}
+
+div.content p {
+	margin : 8px 0 0 8px;
+	padding : 0 24px 16px 24px;
+	line-height : 140%;
+}
+
+div.content img {
+	margin : 8px;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #888888;
+	border-radius : 5px;
+}
+
+div.content img.png {
+	border-width : 0;
+}
+
+div.content div.top {
+	padding : 8px 16px;
+	text-align : right;
+}
+
+div.content table {
+	margin : 8px 0 0 8px;
+	border-collapse : collapse;
+}
+
+div.content th {
+	padding : 4px 16px;
+	text-align : left;
+	background-color : #E0E0E0;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #AAAAAA;
+}
+
+div.content td {
+	padding : 4px 16px;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #AAAAAA;
+}
+
+div.null {
+	padding : 160px 0;
+	text-align : center;
+}
+
+div.section a.item {
+	display : block;
+	padding : 8px 0 0 16px;
+	height : 32px;
+	color : #333333;
+}
+
+div.section a.current {
+	display : block;
+	padding : 8px 0 0 12px;
+	height : 32px;
+	color : #A80000;
+	border-style : solid;
+	border-width : 0 0 0 4px;
+	border-color : #A80000;
+}
+
+div.section a:hover {
+	text-decoration : underline;
+}
+
+div.button {
+	padding : 16px 8px 32px 8px;
+	text-align : right;
+}
+
+div.button a {
+	display : inline-block;
+	width : 160px;
+	height : 24px;
+	padding : 12px;
+	text-align : center;
+	font-weight : bold;
+	color : #FFFFFF;
+	background-color : #3377CC;
+	border-radius : 5px;
+}
+
+div.button a.update {
+	background-color : #CC4400;
+}
+
+div.button a.material {
+	background-color : #339900;
+}
+
+div.social img {
+	margin : 8px 66px 32px 66px;
+}
+
+table.nav {
+	margin : 8px auto 0 auto;
+	width : 998px;
+	background-color : #FFFFFF;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #888888;
+	border-radius : 5px;
+}
+
+table.nav td {
+	padding : 8px 16px;
+}
+
+table.nav td.next {
+	width : 400px;
+	text-align : right;
+}
+
+
+div.print a {
+	color : #000000;
+}
+
+div.print h1 {
+	margin : 0;
+	padding : 4px 8px;
+}
+
+div.print h2 {
+	margin : 0;
+	padding : 4px 8px;
+	color : #000000;
+	background-color : #FFFFFF;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #AAAAAA;
+	border-radius : 5px;
+}
+
+div.print h3 {
+	margin : 4px 0 0 0;
+	padding : 4px 16px;
+}
+
+div.content ul,ol {
+	margin : 4px 0 0 8px;
+}
+
+div.print li {
+	padding : 0;
+	line-height : 130%;
+}
+
+div.content dl {
+	margin : 4px 0 0 60px;
+	padding : 0;
+}
+
+div.print dt {
+	line-height : 120%;
+}
+
+div.print dd {
+	padding : 0 0 8px 0;
+	line-height : 120%;
+}
+
+div.print p {
+	margin : 8px 0 0 8px;
+	padding : 0 24px 8px 24px;
+	line-height : 120%;
+}
+
+div.print table {
+	margin : 4px 0 0 8px;
+	border-collapse : collapse;
+}
+
+div.print th {
+	padding : 2px 16px;
+	text-align : left;
+	background-color : #E0E0E0;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #000000;
+}
+
+div.print td {
+	padding : 2px 16px;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #000000;
+}
+
+
+div.print div.top {
+	display : none;
+}
+
+tr.talign {
+	height : 56px;
+}
+
+tr.talign td {
+	width : 100px;
+}
+
+*.mpserver {
+	background-color : #0064C8;	
+}
+
+*.mpback {
+	background-color : #0064C8;	
+}
+
+*.mpfront {
+	background-color : #C80000;	
+}
+
+*.mpkitchen {
+	background-color : #C86400;	
+}
+
+*.mpad {
+	background-color : #646464;	
+}
+
+*.mporder {
+	background-color : #3CA028;	
+}
+
+*.pwreport {
+	background-color : #A028A0;
+}

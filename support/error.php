@@ -1,0 +1,6 @@
+<?php
+
+//$ERROR_MESSAGE[ERROR_LOAD_TAB]		= '';
+//$ERROR_MESSAGE[ERROR_LOAD_SECTION]	= '';
+
+?>

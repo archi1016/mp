@@ -1,0 +1,302 @@
+<h3>位置</h3><p class="code">icon\ui\指定資料夾\*.ini, 裡面 <span class="key">[XXXXXX]</span> 需與檔名相同</p>
+
+<h3>顏色</h3><p>由 <span class="key">R,G,B,A</span> 組成</p>
+<dl>
+	<dt>R</dt>
+		<dd>紅色, 0~255</dd>
+	<dt>G</dt>
+		<dd>綠色, 0~255</dd>
+	<dt>B</dt>
+		<dd>藍色, 0~255</dd>
+	<dt>A</dt>
+		<dd>透明, 0~255<br />當值為 <span class="key">128</span> 時, G 跟 B 的值會被忽略, <span class="key">R</span> 的值為 <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms724371(v=vs.85).aspx" target="_blank">Windows 系統顏色</a>的編號<br />例: 18,0,0,128<table start="0">
+			<tr><th>值</th><th>說明</th></tr>
+			<tr><td>0</td><td>捲軸</td></tr>
+			<tr><td>1</td><td>桌面</td></tr>
+			<tr><td>2</td><td>現用視窗的標題列</td></tr>
+			<tr><td>3</td><td>非現用視窗的標題列</td></tr>
+			<tr><td>4</td><td>功能表列</td></tr>
+			<tr><td>5</td><td>視窗背景色彩</td></tr>
+			<tr><td>6</td><td>視窗架框</td></tr>
+			<tr><td>7</td><td>功能表文字</td></tr>
+			<tr><td>8</td><td>視窗文字</td></tr>
+			<tr><td>9</td><td>現用視窗標題列的文字</td></tr>
+			<tr><td>10</td><td>現用視窗的框線</td></tr>
+			<tr><td>11</td><td>非現用視窗的框線</td></tr>
+			<tr><td>12</td><td>應用程式工作區</td></tr>
+			<tr><td>13</td><td>反白顯示</td></tr>
+			<tr><td>14</td><td>反白顯示文字</td></tr>
+			<tr><td>15</td><td>按鈕表面</td></tr>
+			<tr><td>16</td><td>按鈕的陰影</td></tr>
+			<tr><td>17</td><td>暫止作用的文字</td></tr>
+			<tr><td>18</td><td>按鈕上的文字</td></tr>
+			<tr><td>19</td><td>非現用視窗的標題列文字</td></tr>
+			<tr><td>20</td><td>按鈕的反白效果</td></tr>
+			<tr><td>21</td><td>按鈕的陰影 (較深的部份)</td></tr>
+			<tr><td>22</td><td>按鈕的反白 (較淺的部份)</td></tr>
+			<tr><td>23</td><td>工具提示文字</td></tr>
+			<tr><td>24</td><td>工具提示背景色彩</td></tr>
+			<tr><td>25</td><td>(未知)</td></tr>
+			<tr><td>26</td><td>連結文字</td></tr>
+			<tr><td>27</td><td>現用視窗的標題列 (漸層右邊)</td></tr>
+			<tr><td>28</td><td>非現用視窗的標題列 (漸層右邊)</td></tr>
+			<tr><td>29</td><td>平面功能表列的反白</td></tr>
+			<tr><td>30</td><td>平面功能表列</td></tr>
+		</table><img src="img/sdk_ui_0001.png" /></dd>
+</dl>
+
+<h3>按鈕圖片</h3><p>由四種狀態組成</p>
+<dl>
+	<dt>格式</dt>
+		<dd>建議使用 <span class="key">png</span><br /><img src="img/sdk_ui_0002.png" /></dd>
+	<dt>狀態</dt>
+		<dd><ul>
+			<li>未使用</li>
+			<li>正常</li>
+			<li>駐點</li>
+			<li>按下</li>
+		</ul></dd>
+	<dt>切割</dt>
+		<dd>透過設定值切割重組成所需按鈕大小<br /><img src="img/sdk_ui_0003.png" /></dd>
+	<dt>效果</dt>
+		<dd>左圖右字<br /><img src="img/sdk_ui_0004.png" /></dd>
+</dl>
+
+<h3>項目</h3>
+<dl>
+	<dt>FONT_SIZE</dt>
+		<dd>字體大小 (pt)</dd>
+	<dt>TEXT</dt>
+		<dd>文字樣板, 留白就不會顯示文字, 預設: %NAME%</dd>
+	<dt>TEXT_PADDING</dt>
+		<dd>文字左右留白 (像素)</dd>
+	<dt>TEXT_ALIGN</dt>
+		<dd>文字對齊方向<table class="code">
+			<tr><th>值</th><th>說明</th></tr>
+			<tr><td>0</td><td>靠左</td></tr>
+			<tr><td>1</td><td>置中</td></tr>
+			<tr><td>2</td><td>靠右</td></tr>
+		</table></dd>
+	<dt>TEXT_COLOR</dt>
+		<dd>文字顏色</dd>
+	<dt>TEXT_COLOR_SHADOW</dt>
+		<dd>文字陰影</dd>
+	<dt>TEXT_COLOR_PRESS</dt>
+		<dd>文字顏色 (按下)</dd>
+	<dt>TEXT_COLOR_PRESS_SHADOW</dt>
+		<dd>文字陰影 (按下)</dd>
+	<dt>TEXT_COLOR_FOCUS</dt>
+		<dd>文字顏色 (駐點)</dd>
+	<dt>TEXT_COLOR_FOCUS_SHADOW</dt>
+		<dd>文字陰影 (駐點)</dd>
+	<dt>BACKGROUND_COLOR</dt>
+		<dd>整個區塊的背景顏色</dd>
+	<dt>DRAW_OVER_COUNT</dt>
+		<dd>無按鈕區域描繪方式<table class="code">
+			<tr><th>值</th><th>說明</th></tr>
+			<tr><td>0</td><td>不描繪</td></tr>
+			<tr><td>1</td><td>補滿按鈕</td></tr>
+			<tr><td>2</td><td>補滿按鈕並填滿區塊</td></tr>
+		</table></dd>
+	<dt>SHOW_ICON</dt>
+		<dd>描繪照片<table class="code">
+			<tr><th>值</th><th>說明</th></tr>
+			<tr><td>0</td><td>停用</td></tr>
+			<tr><td>1</td><td>顯示</td></tr>
+		</table></dd>
+	<dt>PHOTO_WIDTH</dt>
+		<dd>照片寬度 (像素)</dd>
+	<dt>PHOTO_HEIGHT</dt>
+		<dd>照片高度 (像素)</dd>
+	<dt>BUTTON_PADDING</dt>
+		<dd>按鈕裡面的留白 (像素)</dd>
+	<dt>BUTTON_WIDTH</dt>
+		<dd>按鈕高度 (像素)</dd>
+	<dt>BUTTON_IMAGE</dt>
+		<dd>按鈕圖片</dd>
+	<dt>BUTTON_IMAGE_PADDING</dt>
+		<dd>按鈕圖片切割寬度 (像素)</dd>
+	<dt>按鈕空間分配</dt>
+		<dd>上面有照片, 下面無照片<br /><img src="img/sdk_ui_0005.png" /><table class="code">
+			<tr><td>總寬度</td><td>BUTTON_WIDTH</td></tr>
+			<tr><td>總高度</td><td>PHOTO_HEIGHT + BUTTON_PADDING * 2</td></tr>
+			<tr><td>灰色區</td><td>BUTTON_PADDING</td></tr>
+			<tr><td>橘色區</td><td>TEXT_PADDING</td></tr>
+			<tr><td>綠色區</td><td>PHOTO_WIDTH x PHOTO_HEIGHT</td></tr>
+			<tr><td>藍色區</td><td>寬度自動計算 x PHOTO_HEIGHT</td></tr>
+		</table></dd>
+	<dt>ALIGN_TOP</dt>
+		<dd>面板是否對齊上面 (goods_category.ini)<table class="code">
+			<tr><th>值</th><th>說明</th></tr>
+			<tr><td>0</td><td>靠左</td></tr>
+			<tr><td>1</td><td>靠上</td></tr>
+		</table></dd>
+	<dt>COLUMNS</dt>
+		<dd>靠左時每頁顯示行數 (goods_category.ini)</dd>
+	<dt>ROWS</dt>
+		<dd>靠上時每頁顯示列數 (goods_category.ini)</dd>
+	<dt>TEXT_ALIGN</dt>
+		<dd>文字對齊位置 (order_menu.ini)<table class="code">
+			<tr class="talign" valign="top"><td>0</td><td align="center">1</td><td align="right">2</td></tr>
+			<tr class="talign"><td>3</td><td align="center">4</td><td align="right">5</td></tr>
+			<tr class="talign" valign="bottom"><td>6</td><td align="center">7</td><td align="right">8</td></tr>
+		</table></dd>
+	<dt>TEXT_BORDER_WIDTH</dt>
+		<dd>文字框線寬度 (像素)</dd>
+	<dt>BORDER_COLOR</dt>
+		<dd>框線顏色</dd>
+	<dt>*_FIELD_WIDTH</dt>
+		<dd>欄位寬度 (像素)</dd>
+	<dt>TEXT_COLOR_*</dt>
+		<dd>文字顏色</dd>
+	<dt>BACKGROUND_COLOR_*</dt>
+		<dd>背景顏色</dd>
+	<dt>CHARS_*</dt>
+		<dd>字元表 (search_chars.ini)<table class="code">
+			<tr><td>{SPACE}</td><td>空白</li>
+			<tr><td>{COMMA}</td><td>逗號</li>
+		</table></dd>
+</dl>
+
+<h3>TEXT常數</h3>
+<dl>
+	<dt>additional.ini</dt>
+		<dd>加料選擇<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>名稱</li>
+			<tr><td>%UNIT%</td><td>單位</li>
+			<tr><td>%PRICE%</td><td>價格</li>
+			<tr><td>%COUNT%</td><td>數量</li>
+		</table></dd>
+	<dt>attendance.ini</dt>
+		<dd>員工出勤<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NAME%</td><td>姓名</li>
+			<tr><td>%GROUP%</td><td>族群</li>
+			<tr><td>%ACCOUNT%</td><td>帳號</li>
+			<tr><td>%SEX%</td><td>性別</li>
+			<tr><td>%TIMER%</td><td>經過時間</li>
+			<tr><td>%DATE%</td><td>上班日期</li>
+			<tr><td>%TIME%</td><td>上班時間</li>
+		</table></dd>
+	<dt>booking_table.ini</dt>
+		<dd>餐桌選擇<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>桌號</li>
+			<tr><td>%SEATS%</td><td>座位數</li>
+			<tr><td>%PLACE%</td><td>區域</li>
+			<tr><td>%TIME%</td><td>預定時間</li>
+			<tr><td>%MEMO%</td><td>備忘</li>
+		</table></dd>
+	<dt>call.ini</dt>
+		<dd>呼叫確認<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%TABLE%</td><td>桌號</li>
+			<tr><td>%CALLER%</td><td>顧客</li>
+			<tr><td>%MESSAGE%</td><td>訊息</li>
+			<tr><td>%TIMER%</td><td>經過時間</li>
+			<tr><td>%DATE%</td><td>日期</li>
+			<tr><td>%TIME%</td><td>時間</li>
+		</table></dd>
+	<dt>call_tips.ini</dt>
+		<dd>櫃臺呼叫提示<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%TABLE%</td><td>桌號</li>
+			<tr><td>%CALLER%</td><td>顧客</li>
+		</table></dd>
+	<dt>display_item.ini</dt>
+		<dd>廚房顯示 (內容)<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>名稱</li>
+			<tr><td>%UNIT%</td><td>單位</li>
+			<tr><td>%FLAVOR%</td><td>口味</li>
+			<tr><td>%ADDITIONAL%</td><td>加料</li>
+			<tr><td>%COUNT%</td><td>數量</li>
+		</table></dd>
+	<dt>display_title.ini</dt>
+		<dd>廚房顯示 (訂單)<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>單號(桌號)</li>
+			<tr><td>%TIME%</td><td>時間</li>
+			<tr><td>%MARK%</td><td>標記</li>
+			<tr><td>%MEMO%</td><td>備忘</li>
+		</table></dd>
+	<dt>goods.ini</dt>
+		<dd>商品<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>名稱</li>
+			<tr><td>%UNIT%</td><td>單位</li>
+			<tr><td>%PRICE%</td><td>價格</li>
+		</table></dd>
+	<dt>order_goods.ini</dt>
+		<dd>商品 (自助點餐)<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>名稱</li>
+			<tr><td>%UNIT%</td><td>單位</li>
+			<tr><td>%PRICE%</td><td>價格</li>
+		</table></dd>
+	<dt>order_meal_list.ini</dt>
+		<dd>明細 (自助點餐)<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>名稱</li>
+			<tr><td>%UNIT%</td><td>單位</li>
+			<tr><td>%PRICE%</td><td>價格</li>
+			<tr><td>%COUNT%</td><td>數量</li>
+			<tr><td>%SUBTOTAL%</td><td>小計</li>
+			<tr><td>%FLAVOR%</td><td>口味</li>
+			<tr><td>%ADDITIONAL%</td><td>加料</li>
+		</table></dd>
+	<dt>ordering.ini</dt>
+		<dd>點餐確認<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%TABLE%</td><td>桌號</li>
+			<tr><td>%STATUS%</td><td>狀態</li>
+			<tr><td>%PURCHASER%</td><td>顧客</li>
+			<tr><td>%TOTAL%</td><td>應收</li>
+			<tr><td>%PAID%</td><td>預付</li>
+			<tr><td>%CHANGE%</td><td>找零</li>
+			<tr><td>%COUNT%</td><td>筆數</li>
+			<tr><td>%TIMER%</td><td>經過時間</li>
+			<tr><td>%ID%</td><td>隨機號碼</li>
+			<tr><td>%DATE%</td><td>日期</li>
+			<tr><td>%TIME%</td><td>時間</li>
+		</table></dd>
+	<dt>ordering_tips.ini</dt>
+		<dd>自助點餐提示<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%TABLE%</td><td>桌號</li>
+			<tr><td>%PURCHASER%</td><td>顧客</li>
+			<tr><td>%COUNT%</td><td>筆數</li>
+		</table></dd>
+	<dt>table_status.ini</dt>
+		<dd>餐桌</dd>
+	<dt>uncollected.ini</dt>
+		<dd>延收帳款<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NAME%</td><td>顧客</li>
+			<tr><td>%CASH_REGISTER%</td><td>收銀機</li>
+			<tr><td>%TYPE%</td><td>類型</li>
+			<tr><td>%VALUE%</td><td>金額</li>
+			<tr><td>%TIMER%</td><td>經過時間</li>
+			<tr><td>%DATE%</td><td>日期</li>
+			<tr><td>%TIME%</td><td>時間</li>
+		</table></dd>
+	<dt>waiting.ini</dt>
+		<dd>候位表<table class="code">
+			<tr><th>常數</th><th>說明</th></tr>
+			<tr><td>%NO.%</td><td>順序號碼</li>
+			<tr><td>%NAME%</td><td>顧客</li>
+			<tr><td>%SEATS%</td><td>位數</li>
+			<tr><td>%TIME%</td><td>時間</li>
+			<tr><td>%MEMO%</td><td>備用</li>
+			<tr><td>%TABLE%</td><td>指定餐桌</li>
+		</table></dd>
+</dl>
+</dl>

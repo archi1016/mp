@@ -1,0 +1,265 @@
+<h3>位置</h3>
+<dl>
+	<dt>前台收銀</dt>
+		<dd class="code">client\template\</dd>
+	<dt>服務端</dt>
+		<dd class="code">template\</dd>
+</dl>
+
+<h3>說明</h3><p>我們將列印樣板化, 是為了修改方便, 同一組應用裡, 可以有多種樣板供選擇, 所以複製一組就可以 DIY 了</p>
+
+<h3>結構</h3><p>指令與參數之間用<span class="key">字位符號 0x09</span>作分隔</p>
+<ul>
+	<li>區段<ul>
+		<li>指令</li>
+		<li>欄位 (FIELD)<ul>
+			<li>FIELD 指令</li>
+		</ul></li>
+		<li>區塊 (LAYER)<ul>
+			<li>LAYER 指令</li>
+		</ul></li>
+	</ul></li>
+</ul>
+
+
+<h3>區段</h3><p>每個樣板由區段組成, 而區段為指令之集合, 經過文字套用引擎轉成列印指令表, 再輸出至印表機</p>
+<dl>
+	<dt>SEGMENT_BEGIN</dt>
+		<dd>區段開始<ol>
+			<li>名稱<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>BODY</td><td>主區段</td></tr>
+				<tr><td>CONFIG</td><td>參數設定</td></tr>
+				<tr><td>其他</td><td>依用途而不同</td></tr>
+			</table></li>
+		</ol></dd>
+	<dt>SEGMENT_END</dt>
+		<dd>區段結束</dd>
+</dl>
+
+<h3>BODY 區段</h3><p>樣板的主區段, 一定要有, 裡面由指令組成, 如含有<span class="key">其他區段名稱</span>, 會依需求替換</p>
+
+<h3>CONFIG 區段</h3><p>一般列印無需設定, 使用預設值即可</p>
+<dl>
+	<dt>PAGE_PADDING</dt>
+		<dd>頁邊留白 (pt)<br />預設: 0</dd>
+	<dt>PAGE_COLUMNS</dt>
+		<dd>每頁區塊行數<br />預設: 2</dd>
+	<dt>PAGE_ROWS</dt>
+		<dd>每頁區塊列數<br />預設: 2</dd>
+	<dt>LAYER_PADDING</dt>
+		<dd>區塊外邊留白 (pt)<br />預設: 8</dd>
+	<dt>LAYER_W2H</dt>
+		<dd>區塊寬度換算高度的比值<br />預設: 1.0</dd>
+</dl>
+
+<h3>指令</h3>
+<dl>
+	<dt>BACKGROUND_IMAGE</dt>
+		<dd>背景圖片<ol>
+			<li>圖片檔 (與樣板檔同資料夾, 或使用完整路徑指向其他圖檔)</li>
+		</ol></dd>
+	<dt>BARCODE</dt>
+		<dd>條碼<ol>
+			<li>種類<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>EAN-13</td><td>EAN-13條碼</td></tr>
+			</table></li>
+			<li>上下留白 (pt)</li>
+			<li>左右留白 (pt)</li>
+			<li>線寬 (pt)</li>
+			<li>寬度換算高度的比值 (0.XX)</li>
+			<li>列印文字<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>0</td><td>不印</td></tr>
+				<tr><td>1</td><td>印出來</td></tr>
+			</table></li>
+			<li>條碼字串</li>
+		</ol></dd>
+	<dt>FIELD_BEGIN</dt>
+		<dd>欄位<ol>
+			<li>字型<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>-</td><td>延用目前字型</td></tr>
+				<tr><td>Verdana</td><td>Verdana字型</td></tr>
+				<tr><td>Georgia</td><td>Georgia字型</td></tr>
+				<tr><td>其他</td><td>請參考 &lt;<a href="http://www.microsoft.com/typography/fonts/" target="_blank">Microsoft Typography</a>&gt;</td></tr>
+			</table></li>
+			<li>大小 (pt)<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>-1</td><td>延用目前大小</td></tr>
+			</table></li>
+		</ol></dd>
+	<dt>FIELD_END</dt>
+		<dd>欄位結束</dd>
+	<dt>FONT</dt>
+		<dd>更換字型<ol>
+			<li>字型</li>
+			<li>大小 (pt)</li>
+		</ol></dd>
+	<dt>IMAGE</dt>
+		<dd>印圖<ol>
+			<li>對齊<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>0</td><td>靠左</td></tr>
+				<tr><td>1</td><td>置中</td></tr>
+				<tr><td>2</td><td>靠右</td></tr>
+				<tr><td>LEFT</td><td>靠左</td></tr>
+				<tr><td>CENTER</td><td>置中</td></tr>
+				<tr><td>RIGHT</td><td>靠右</td></tr>
+			</table></li>
+			<li>寬度 (pt)</li>
+			<li>圖片檔 (與樣板檔同資料夾, 或使用完整路徑指向其他圖檔)</li>
+		</ol></dd>
+	<dt>LAYER_BEGIN</dt>
+		<dd>區塊<ol>
+			<li>起點X (pt)</li>
+			<li>起點Y (pt)</li>
+			<li>寬度 (pt)</li>
+			<li>高度 (pt)</li>
+		</ol><span class="key">條碼型錄</span>可用 {AUTO_X}, {AUTO_Y}, {AUTO_WIDTH}, {AUTO_HEIGHT} 替代</dd>
+	<dt>LAYER_END</dt>
+		<dd>區塊結束</dd>
+	<dt>LINE</dt>
+		<dd>畫橫線<ol>
+			<li>高度 (pt)</li>
+			<li>上面留白 (pt)</li>
+			<li>下面留白 (pt)</li>
+		</ol></dd>
+	<dt>LOCATION_Y</dt>
+		<dd>最低高度<ol>
+			<li>Y座標 (pt)<br />當目前Y座標小於此值就套用此值</li>
+		</ol></dd>
+	<dt>TEXT</dt>
+		<dd>文字<ol>
+			<li>字型<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>-</td><td>延用目前字型</td></tr>
+				<tr><td>Verdana</td><td>Verdana字型</td></tr>
+				<tr><td>Georgia</td><td>Georgia字型</td></tr>
+				<tr><td>其他</td><td>請參考 &lt;<a href="http://www.microsoft.com/typography/fonts/" target="_blank">Microsoft Typography</a>&gt;</td></tr>
+			</table></li>
+			<li>大小 (pt)<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>-1</td><td>延用目前大小</td></tr>
+			</table></li>
+			<li>對齊<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>0</td><td>靠左</td></tr>
+				<tr><td>1</td><td>置中</td></tr>
+				<tr><td>2</td><td>靠右</td></tr>
+				<tr><td>LEFT</td><td>靠左</td></tr>
+				<tr><td>CENTER</td><td>置中</td></tr>
+				<tr><td>RIGHT</td><td>靠右</td></tr>
+			</table></li>
+			<li>字串</li>
+		</ol></dd>
+	<dt>TEXT_COLOR</dt>
+		<dd><ol>
+			<li>R,G,B (紅, 綠, 藍, 各值範圍 0~255)</li>
+		</ol></dd>
+</dl>
+
+<h3>FIELD 指令</h3>
+<dl>
+	<dt>FIELD_IMAGE</dt>
+		<dd>圖片<ol>
+			<li>起點 (頁寬的百分比 0~100)</li>
+			<li>寬度 (頁寬的百分比 0~100)</li>
+			<li>對齊<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>0</td><td>靠左</td></tr>
+				<tr><td>1</td><td>置中</td></tr>
+				<tr><td>2</td><td>靠右</td></tr>
+				<tr><td>LEFT</td><td>靠左</td></tr>
+				<tr><td>CENTER</td><td>置中</td></tr>
+				<tr><td>RIGHT</td><td>靠右</td></tr>
+			</table></li>
+			<li>圖片檔 (與樣板檔同資料夾, 或使用完整路徑指向其他圖檔)</li>
+		</ol></dd>
+	<dt>FIELD_TEXT</dt>
+		<dd>文字<ol>
+			<li>起點 (頁寬的百分比 0~100)</li>
+			<li>寬度 (頁寬的百分比 0~100)</li>
+			<li>對齊<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>0</td><td>靠左</td></tr>
+				<tr><td>1</td><td>置中</td></tr>
+				<tr><td>2</td><td>靠右</td></tr>
+				<tr><td>LEFT</td><td>靠左</td></tr>
+				<tr><td>CENTER</td><td>置中</td></tr>
+				<tr><td>RIGHT</td><td>靠右</td></tr>
+			</table></li>
+			<li>字串</li>
+		</ol></dd>
+
+</dl>
+
+<h3>LAYER 指令</h3>
+<dl>
+	<dt>LAYER_BARCODE</dt>
+		<dd><ol>
+			<li>種類<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>EAN-13</td><td>EAN-13條碼</td></tr>
+			</table></li>
+			<li>上下留白 (pt)</li>
+			<li>左右留白 (pt)</li>
+			<li>線寬 (pt)</li>
+			<li>寬度換算高度的比值 (0.XX)</li>
+			<li>列印文字<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>0</td><td>不印</td></tr>
+				<tr><td>1</td><td>印出來</td></tr>
+			</table></li>
+			<li>起點X (區塊寬度的百分比 0~100)</li>
+			<li>起點Y (區塊高度的百分比 0~100)</li>
+			<li>條碼字串</li>
+		</ol></dd>
+	<dt>LAYER_BOX_LINE</dt>
+		<dd><ol>
+			<li>起點X (區塊寬度的百分比 0~100)</li>
+			<li>起點Y (區塊高度的百分比 0~100)</li>
+			<li>寬度 (區塊寬度的百分比 0~100)</li>
+			<li>高度 (區塊高度的百分比 0~100)</li>
+			<li>線寬 (pt)</li>
+			<li>線的顏色 R,G,B (紅, 綠, 藍, 各值範圍 0~255)</li>
+		</ol></dd>
+	<dt>LAYER_IMAGE</dt>
+		<dd><ol>
+			<li>起點X (區塊寬度的百分比 0~100)</li>
+			<li>起點Y (區塊高度的百分比 0~100)</li>
+			<li>寬度 (區塊寬度的百分比 0~100)</li>
+			<li>高度 (區塊高度的百分比 0~100)</li>
+			<li>圖片檔 (與樣板檔同資料夾, 或使用完整路徑指向其他圖檔)</li>
+		</ol></dd>
+	<dt>LAYER_TEXT</dt>
+		<dd><ol>
+			<li>字型<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>-</td><td>延用目前字型</td></tr>
+				<tr><td>Verdana</td><td>Verdana字型</td></tr>
+				<tr><td>Georgia</td><td>Georgia字型</td></tr>
+				<tr><td>其他</td><td>請參考 &lt;<a href="http://www.microsoft.com/typography/fonts/" target="_blank">Microsoft Typography</a>&gt;</td></tr>
+			</table></li>
+			<li>大小 (pt)<table class="code">
+				<tr><th>值</th><th>說明</th></tr>
+				<tr><td>-1</td><td>延用目前大小</td></tr>
+			</table></li>
+			<li>起點X (區塊寬度的百分比 0~100)</li>
+			<li>起點Y (區塊高度的百分比 0~100)</li>
+			<li>字串</li>
+		</ol></dd>
+	<dt>LAYER_TEXT_COLOR</dt>
+		<dd><ol>
+			<li>R,G,B (紅, 綠, 藍, 各值範圍 0~255)</li>
+		</ol></dd>
+</dl>
+
+<h3>測試</h3>
+<p>樣板檔在 <span class="code">client\template\ </span> 中, 改完並測試OK就可以丟回服務端</p>
+<ol>
+	<li>設定印表機<br /><a href="img/sdk_template_0001_source.png" target="_blank"><img src="img/sdk_template_0001.png" /></a></li>
+	<li>選取一組應用, 按編輯<br /><a href="img/sdk_template_0002_source.png" target="_blank"><img src="img/sdk_template_0002.png" /></a></li>
+	<li>設定畫面<br /><a href="img/sdk_template_0003_source.png" target="_blank"><img src="img/sdk_template_0003.png" /></a></li>
+</ol>
